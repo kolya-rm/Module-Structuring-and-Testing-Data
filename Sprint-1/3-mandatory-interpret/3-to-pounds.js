@@ -25,3 +25,31 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 
+//  2. const penceStringWithoutTrailingP = penceString.substring(
+//  0,
+//  penceString.length - 1
+// ); : initialize a string variable with value "399" which we get by evaluating 
+// substring from the begin to finish - 1 position substring of the string stored
+// in the penceString variable.
+//
+// 3. const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"):
+// initializes a string variable with value 399. The function padStart appends
+// given string with given symbol until we get string with given length.
+//
+// 4. const pounds = paddedPenceNumberString.substring(
+//  0,
+//  paddedPenceNumberString.length - 2
+// ) : initializes a string variable pounds with the value "3". By returning
+// from paddedPenceNumberString substring from string length-2 position to the
+// end of string.
+//
+// 5. const pence = paddedPenceNumberString
+//  .substring(paddedPenceNumberString.length - 2)
+//  .padEnd(2, "0"): initialize pence variable with the value 99. By returning
+// from paddedPenceNumberSting substring of 2 last symbols and append with "0"
+// to length of 2 symbols.
+//
+// 6. console.log(`£${pounds}.${pence}`): output in console string "£3.99".
+// In the interpolated string passed as an argument in the function console.log()
+// the variables are replaced their values.
