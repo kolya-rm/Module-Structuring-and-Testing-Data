@@ -92,3 +92,10 @@ assertEquals(bothNegativeNumeratorLess, true);
 // Explanation: the fraction -5/-2 is a improper fraction because the absolute value of the numerator(-5) greater than the absolute value of the denominator (-2).
 const bothNegativeNumeratorGreater = isProperFraction(-5, -2);
 assertEquals(bothNegativeNumeratorGreater, false);
+
+// Both negative with equal values
+// Input: numerator = -2 denominator = -2
+// Target output: false
+// Explanation: the fraction -2/-2 is a improper fraction because the numerator(-2) equal to the the denominator (-2).
+const bothNegativeEqual = isProperFraction(-2, -2);
+assertEquals(bothNegativeEqual, false);
