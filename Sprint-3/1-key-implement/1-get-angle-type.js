@@ -20,6 +20,9 @@ function getAngleType(angle) {
    if (angle < 180) {
     return "Obtuse angle";
    }
+   if (angle < 360) {
+    return "Reflex angle";
+   }
 }
 
 // we're going to use this helper function to make our assertions easier to read
