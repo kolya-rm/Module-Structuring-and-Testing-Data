@@ -8,8 +8,12 @@
 // Then, write the next test! :) Go through this process until all the cases are implemented
 
 function getAngleType(angle) {
-   if (angle === 90) return "Right angle";
-   // read to the end, complete line 36, then pass your test here
+   if (angle === 90) {
+    return "Right angle";
+   }
+   if (angle < 90) {
+    return "Acute angle";
+   } 
 }
 
 // we're going to use this helper function to make our assertions easier to read
