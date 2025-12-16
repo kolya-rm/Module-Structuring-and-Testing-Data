@@ -64,3 +64,10 @@ assertEquals(equalFraction, false);
 // Explanation: The fraction -5/2 is a improper fraction because the absolute value of the numerator (-5) is greater than the denominator (2). The function should return false.
 const negativeGreaterNumerator = isProperFraction(-5, 2);
 assertEquals(negativeGreaterNumerator, false);
+
+// Negative denominator with absolute value greater than numerator
+// Input numerator = 2 denominator = -5
+// Target output: true
+// Explanation: The fraction 2/-5 is a proper fraction because the numerator (2) is greater than the absolute value of the denominator (-5). The function should return true.
+const negativeGreaterDenominator = isProperFraction(2, -5);
+assertEquals(negativeGreaterDenominator, true);
