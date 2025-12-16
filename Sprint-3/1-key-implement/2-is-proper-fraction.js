@@ -99,3 +99,10 @@ assertEquals(bothNegativeNumeratorGreater, false);
 // Explanation: the fraction -2/-2 is a improper fraction because the numerator(-2) equal to the the denominator (-2).
 const bothNegativeEqual = isProperFraction(-2, -2);
 assertEquals(bothNegativeEqual, false);
+
+// Numerator is zero
+// Input: numerator = 0 denominator = 2
+// Target output: true
+// Explanation: the fraction 0/2 is a proper fraction because the numerator (0) less than the absolute value of the denominator.
+const zeroNumerator = isProperFraction(0, 2);
+assertEquals(zeroNumerator, true);
