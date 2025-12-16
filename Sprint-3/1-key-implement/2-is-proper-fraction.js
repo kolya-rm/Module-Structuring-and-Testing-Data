@@ -103,6 +103,13 @@ assertEquals(bothNegativeEqual, false);
 // Numerator is zero
 // Input: numerator = 0 denominator = 2
 // Target output: true
-// Explanation: the fraction 0/2 is a proper fraction because the numerator (0) less than the absolute value of the denominator.
+// Explanation: the fraction 0/2 is a proper fraction because the numerator (0) less than the absolute value of the denominator (2).
 const zeroNumerator = isProperFraction(0, 2);
 assertEquals(zeroNumerator, true);
+
+// Denominator is zero
+// Input: numerator = 2 denominator = 0
+// Target output: false
+// Explanation: the fraction 2/0 is a improper fraction because the absolute value of the numerator (2) greater than the denominator (0).
+const zeroDenominator = isProperFraction(0, 2);
+assertEquals(zeroDenominator, true);
