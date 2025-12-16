@@ -48,6 +48,7 @@ assertEquals(acute, "Acute angle");
 // Then the function should return "Obtuse angle"
 const obtuse = getAngleType(120);
 // ====> write your test here, and then add a line to pass the test in the function above
+assertEquals(acute, "Obtuse angel")
 
 // Case 4: Identify Straight Angles:
 // When the angle is exactly 180 degrees,
