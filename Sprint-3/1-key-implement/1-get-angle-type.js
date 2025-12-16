@@ -13,7 +13,10 @@ function getAngleType(angle) {
    }
    if (angle < 90) {
     return "Acute angle";
-   } 
+   }
+   if (angle < 180) {
+    return "Obtuse angle";
+   }
 }
 
 // we're going to use this helper function to make our assertions easier to read
