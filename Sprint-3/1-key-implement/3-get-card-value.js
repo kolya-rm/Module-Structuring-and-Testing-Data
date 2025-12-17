@@ -12,6 +12,15 @@ function getCardValue(card) {
   switch (rank) {
     case "A":
       return 11;
+    case "2":
+    case "3":
+    case "4":
+    case "5":
+    case "6":
+    case "7":
+    case "8":
+    case "9":
+      return Number(rank);
   }
 }
 
@@ -37,8 +46,22 @@ assertEquals(aceOfSpades, 11);
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveOfHearts = getCardValue("5♥");
+const twoOfHearts = getCardValue("2♥");
+const threeOfHearts = getCardValue("3♥");
+const fourOfHearts = getCardValue("4♥");
+const sixOfHearts = getCardValue("6♥");
+const sevenOfHearts = getCardValue("7♥");
+const eightOfHearts = getCardValue("8♥");
+const nineOfHearts = getCardValue("9♥");
 // ====> write your test here, and then add a line to pass the test in the function above
 assertEquals(fiveOfHearts, 5);
+assertEquals(twoOfHearts, 2);
+assertEquals(threeOfHearts, 3);
+assertEquals(fourOfHearts, 4);
+assertEquals(sixOfHearts, 6);
+assertEquals(sevenOfHearts, 7);
+assertEquals(eightOfHearts, 8);
+assertEquals(nineOfHearts, 9);
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
