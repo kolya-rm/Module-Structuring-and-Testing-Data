@@ -10,8 +10,6 @@
 function getCardValue(card) {
   const rank = card.slice(0, card.length - 1);
   switch (rank) {
-    case "A":
-      return 11;
     case "2":
     case "3":
     case "4":
@@ -26,6 +24,8 @@ function getCardValue(card) {
     case "Q":
     case "K":
       return 10;
+    case "A":
+      return 11;
   }
 }
 
@@ -43,8 +43,6 @@ function assertEquals(actualOutput, targetOutput) {
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
-const aceOfSpades = getCardValue("A♠");
-assertEquals(aceOfSpades, 11);
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
@@ -85,6 +83,8 @@ assertEquals(kingOfClubs, 10);
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const aceOfSpades = getCardValue("A♠");
+assertEquals(aceOfSpades, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
