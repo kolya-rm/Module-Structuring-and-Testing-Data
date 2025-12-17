@@ -21,6 +21,11 @@ function getCardValue(card) {
     case "8":
     case "9":
       return Number(rank);
+    case "10":
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
   }
 }
 
