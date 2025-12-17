@@ -8,7 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  const rank = card.slice(0, card.length - 1);
+  switch (rank) {
+    case "A":
+      return 11;
+  }
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -25,8 +29,8 @@ function assertEquals(actualOutput, targetOutput) {
 // Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
-const aceofSpades = getCardValue("A♠");
-assertEquals(aceofSpades, 11);
+const aceOfSpades = getCardValue("A♠");
+assertEquals(aceOfSpades, 11);
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
