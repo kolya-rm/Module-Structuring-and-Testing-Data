@@ -26,6 +26,8 @@ function getCardValue(card) {
       return 10;
     case "A":
       return 11;
+    default:
+      throw new Error("Invalid card rank");
   }
 }
 
