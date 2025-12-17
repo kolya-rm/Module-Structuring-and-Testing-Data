@@ -8,7 +8,11 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+  const rank = card.slice(0, card.length - 1);
+  switch (rank) {
+    case "A":
+      return 11;
+  }
 }
 
 // You need to write assertions for your function to check it works in different cases
