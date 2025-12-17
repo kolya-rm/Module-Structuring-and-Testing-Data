@@ -90,3 +90,13 @@ assertEquals(aceOfSpades, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+const oneOfDiamonds = "1♦";
+const twentyUnoOfDiamonds = "21♦";
+const hundredOfDiamonds = "100♦";
+const catOfDiamonds = "C♦";
+
+getCardValue(oneOfDiamonds);
+getCardValue(twentyUnoOfDiamonds);
+getCardValue(hundredOfDiamonds);
+getCardValue(catOfDiamonds);
