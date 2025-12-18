@@ -41,12 +41,12 @@ test("Should return 9 for Nine of Hearts", () => {
   expect(getCardValue(nineOfHearts)).toEqual(9);
 });
 
-// Case 3: Handle Face Cards (10, J, Q, K):
-test("Should return 10 for Ten of Clubs", () => {
-  const tenOfClubs = "10♣";
+test("Should return 10 for Ten of Hearts", () => {
+  const tenOfClubs = "10♥";
   expect(getCardValue(tenOfClubs)).toEqual(10);
 });
 
+// Case 3: Handle Face Cards (J, Q, K):
 test("Should return 10 for Jack of Clubs", () => {
   const jackOfClubs = "J♣";
   expect(getCardValue(jackOfClubs)).toEqual(10);
