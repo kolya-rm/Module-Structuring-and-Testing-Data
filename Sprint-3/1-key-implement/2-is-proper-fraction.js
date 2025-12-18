@@ -107,5 +107,5 @@ assertEquals(zeroNumerator, true);
 // Input: numerator = 2 denominator = 0
 // Target output: false
 // Explanation: the fraction 2/0 is a improper fraction because the absolute value of the numerator (2) greater than the denominator (0).
-const zeroDenominator = isProperFraction(0, 2);
-assertEquals(zeroDenominator, true);
+const zeroDenominator = isProperFraction(2, 0);
+assertEquals(zeroDenominator, false);
