@@ -32,10 +32,14 @@ test("Should return true for a proper fraction with both negative parts", () => 
   expect(isProperFraction(-2, -3)).toEqual(true);
 });
 
-test("Should return false false for an improper fraction with both negative fraction", () => {
+test("Should return false false for an improper fraction with both negative parts", () => {
   expect(isProperFraction(-3, -2)).toEqual(false);
 });
 
-test("Should return false for negative equal nominator and denominator", () => {
+test("Should return false for negative equal numerator and denominator", () => {
   expect(isProperFraction(-2, -2)).toEqual(false);
+});
+
+test("Should return true for a fraction with zero numerator", () => {
+  expect(isProperFraction(0, 2)).toEqual(true);
 });
