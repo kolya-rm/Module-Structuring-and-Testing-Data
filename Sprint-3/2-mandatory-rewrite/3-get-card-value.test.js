@@ -69,3 +69,22 @@ test("Should return 11 for Ace of Spades", () => {
 });
 
 // Case 5: Handle Invalid Cards:
+test("Should throw the 'Invalid card rank' error for One of Diamonds", () => {
+  const oneOfDiamonds = "1♦";
+  expect(() => getCardValue(oneOfDiamonds)).toThrowError("Invalid card rank");
+});
+
+test("Should throw the 'Invalid card rank' error for One of Diamonds", () => {
+  const twentyOneOfDiamonds = "21♦";
+  expect(() => getCardValue(twentyOneOfDiamonds)).toThrowError("Invalid card rank");
+});
+
+test("Should throw the 'Invalid card rank' error for One of Diamonds", () => {
+  const oneHundredOfDiamonds = "100♦";
+  expect(() => getCardValue(oneHundredOfDiamonds)).toThrowError("Invalid card rank");
+});
+
+test("Should throw the 'Invalid card rank' error for One of Diamonds", () => {
+  const catOfDiamonds = "C♦";
+  expect(() => getCardValue(catOfDiamonds)).toThrowError("Invalid card rank");
+});
