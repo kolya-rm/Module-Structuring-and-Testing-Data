@@ -35,3 +35,7 @@ test("Should return true for a proper fraction with both negative parts", () => 
 test("Should return false false for an improper fraction with both negative fraction", () => {
   expect(isProperFraction(-3, -2)).toEqual(false);
 });
+
+test("Should return false for negative equal nominator and denominator", () => {
+  expect(isProperFraction(-2, -2)).toEqual(false);
+});
