@@ -47,5 +47,25 @@ test("Should return 9 for Nine of Hearts", () => {
 });
 
 // Case 3: Handle Face Cards (10, J, Q, K):
+test("Should return 10 for Ten of Clubs", () => {
+  const tenOfClubs = "10♣";
+  expect(getCardValue(tenOfClubs)).toEqual(10);
+});
+
+test("Should return 10 for Jack of Clubs", () => {
+  const jackOfClubs = "J♣";
+  expect(getCardValue(jackOfClubs)).toEqual(10);
+});
+
+test("Should return 10 for Queen of Clubs", () => {
+  const queenOfClubs = "Q♣";
+  expect(getCardValue(queenOfClubs)).toEqual(10);
+});
+
+test("Should return 10 for King of Clubs", () => {
+  const kingOfClubs = "K♣";
+  expect(getCardValue(kingOfClubs)).toEqual(10);
+});
+
 // Case 4: Handle Ace (A):
 // Case 5: Handle Invalid Cards:
