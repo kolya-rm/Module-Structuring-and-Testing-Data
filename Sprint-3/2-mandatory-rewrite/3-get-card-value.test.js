@@ -40,6 +40,12 @@ test("Should return 8 for Eight of Hearts", () => {
   const eightOfHearts = "8♥";
   expect(getCardValue(eightOfHearts)).toEqual(8);
 });
-// Case 3: Handle Face Cards (J, Q, K):
+
+test("Should return 9 for Nine of Hearts", () => {
+  const nineOfHearts = "9♥";
+  expect(getCardValue(nineOfHearts)).toEqual(9);
+});
+
+// Case 3: Handle Face Cards (10, J, Q, K):
 // Case 4: Handle Ace (A):
 // Case 5: Handle Invalid Cards:
