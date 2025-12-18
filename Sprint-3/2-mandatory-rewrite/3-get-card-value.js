@@ -9,8 +9,8 @@ function getCardValue(card) {
       case "7":
       case "8":
       case "9":
-        return Number(rank);
       case "10":
+        return Number(rank);
       case "J":
       case "Q":
       case "K":
