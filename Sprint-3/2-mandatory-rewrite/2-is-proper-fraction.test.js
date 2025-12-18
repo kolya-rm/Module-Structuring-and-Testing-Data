@@ -43,3 +43,7 @@ test("Should return false for negative equal numerator and denominator", () => {
 test("Should return true for a fraction with zero numerator", () => {
   expect(isProperFraction(0, 2)).toEqual(true);
 });
+
+test("Should return false for a fraction with zero denominator", () => {
+  expect(isProperFraction(2, 0)).toEqual(false);
+});
