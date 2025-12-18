@@ -19,3 +19,7 @@ test("Should return false for equal positive numerator and denominator", () => {
 test("Should return false for negative improper fraction", () => {
   expect(isProperFraction(-3, 2)).toEqual(false);
 });
+
+test("Should return true for proper fraction with negative denominator", () => {
+  expect(isProperFraction(2, -3)).toEqual(true);
+});
