@@ -16,10 +16,14 @@ test("Should return false for equal positive numerator and denominator", () => {
   expect(isProperFraction(2, 2)).toEqual(false);
 });
 
-test("Should return false for negative improper fraction", () => {
+test("Should return false for a negative improper fraction", () => {
   expect(isProperFraction(-3, 2)).toEqual(false);
 });
 
-test("Should return true for proper fraction with negative denominator", () => {
+test("Should return true for a proper fraction with negative denominator", () => {
   expect(isProperFraction(2, -3)).toEqual(true);
+});
+
+test("Should return false for an improper fraction with negative denominator", () => {
+  expect(isProperFraction(3, -2)).toEqual(false);  
 });
