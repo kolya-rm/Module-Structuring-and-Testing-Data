@@ -8,6 +8,12 @@ function getOrdinalNumber(num) {
     }
     return num + "st";
   }
+  if (lastDigit === 2) {
+    if (last2Digits === 12) {
+      return num + "th";
+    }
+    return num + "nd";
+  }
 }
 
 module.exports = getOrdinalNumber;

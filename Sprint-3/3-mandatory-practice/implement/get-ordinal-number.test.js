@@ -47,7 +47,7 @@ test("should return '22nd' for 22", () => {
 });
 
 test("Should return '102nd' for '102'", () => {
-  expect(getOrdinalNumber(101)).toEqual("102nd");
+  expect(getOrdinalNumber(102)).toEqual("102nd");
 });
 
 test("Should return '112th' for '112'", () => {
@@ -55,5 +55,5 @@ test("Should return '112th' for '112'", () => {
 });
 
 test("should return '122nd' for 122", () => {
-  expect(getOrdinalNumber(121)).toEqual("122nd");
+  expect(getOrdinalNumber(122)).toEqual("122nd");
 });
