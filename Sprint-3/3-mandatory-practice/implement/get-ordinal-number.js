@@ -20,6 +20,7 @@ function getOrdinalNumber(num) {
     }
     return num + "rd";
   }
+  return num + "th";
 }
 
 module.exports = getOrdinalNumber;
