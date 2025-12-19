@@ -113,6 +113,6 @@ test("Should return '1039th' for 1039", () => {
 
 //Case 4: Identify invalid type of argument.
 
-test("", () => {
+test("Should throw TypeError if num is not Number", () => {
   expect(() => {getOrdinalNumber("10")}).toThrow();
 });
