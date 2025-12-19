@@ -116,3 +116,9 @@ test("Should return '1039th' for 1039", () => {
 test("Should throw TypeError if num is not Number", () => {
   expect(() => {getOrdinalNumber("10")}).toThrow();
 });
+
+//Case 4: Identify float argument.
+
+test("Should throw RangeError if num is float", () => {
+  expect(() => {getOrdinalNumber(2.71)}).toThrow();
+});
