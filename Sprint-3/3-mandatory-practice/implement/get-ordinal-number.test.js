@@ -117,8 +117,18 @@ test("Should throw TypeError if num is not Number", () => {
   expect(() => {getOrdinalNumber("10")}).toThrow();
 });
 
-//Case 4: Identify float argument.
+//Case 5: Identify float argument.
 
 test("Should throw RangeError if num is float", () => {
   expect(() => {getOrdinalNumber(2.71)}).toThrow();
+});
+
+//Case 6: Identify non natural argument
+
+test("Should throw Range error for 0", () => {
+  expect(() => {getOrdinalNumber(0)}).toThrow();
+});
+
+test("Should throw Range error for negative num", () => {
+  expect(() => {getOrdinalNumber(-1);}).toThrow();
 });
