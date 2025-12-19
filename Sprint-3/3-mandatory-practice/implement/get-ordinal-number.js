@@ -1,5 +1,13 @@
 function getOrdinalNumber(num) {
-  return "1st";
+  const lastDigit = num % 10;
+  const last2Digits = num % 100;
+  console.log(`${num} ${lastDigit} ${last2Digits}`);
+  if (lastDigit === 1) {
+    if (last2Digits === 11) {
+      return num + "th";
+    }
+    return num + "st";
+  }
 }
 
 module.exports = getOrdinalNumber;
