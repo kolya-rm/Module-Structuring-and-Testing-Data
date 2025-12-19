@@ -3,6 +3,10 @@ function getOrdinalNumber(num) {
     throw new TypeError(`'${num}' is not a number.`);
   }
 
+  if (!Number.isInteger(num)) {
+    throw new RangeError(`'${num}' is float`);
+  }
+
   const lastDigit = num % 10;
   const last2Digits = num % 100;
   
