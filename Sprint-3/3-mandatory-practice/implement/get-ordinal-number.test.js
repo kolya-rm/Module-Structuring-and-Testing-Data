@@ -110,3 +110,9 @@ test("Should return '288th' for 288", () => {
 test("Should return '1039th' for 1039", () => {
   expect(getOrdinalNumber(1039)).toEqual("1039th");
 });
+
+//Case 4: Identify invalid type of argument.
+
+test("", () => {
+  expect(() => {getOrdinalNumber("10")}).toThrow();
+});
