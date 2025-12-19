@@ -7,6 +7,10 @@ function getOrdinalNumber(num) {
     throw new RangeError(`'${num}' is float`);
   }
 
+  if (num < 1) {
+    throw new RangeError(`'${num}' is not natural number`);
+  }
+
   const lastDigit = num % 10;
   const last2Digits = num % 100;
   
