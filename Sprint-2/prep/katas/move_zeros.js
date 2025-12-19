@@ -34,3 +34,5 @@ console.assert(
     (moveZeros([false, 1, 0, 1, 2, 0, "a"])) === ([false, 1, 1, 2, "a", 0, 0]),
     "Failed: Should treat 'false' or strings differently than the number 0"
 );
+
+module.exports = moveZeros;
