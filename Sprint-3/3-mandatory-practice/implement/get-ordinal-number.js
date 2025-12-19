@@ -14,6 +14,12 @@ function getOrdinalNumber(num) {
     }
     return num + "nd";
   }
+  if (lastDigit === 3) {
+    if (last2Digits === 13) {
+      return num + "th";
+    }
+    return num + "rd";
+  }
 }
 
 module.exports = getOrdinalNumber;
