@@ -11,7 +11,7 @@ test("Should return '1st' for 1", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
 });
 
-test("Should return '11th' for '11'", () => {
+test("Should return '11th' for 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
 })
 
@@ -19,11 +19,11 @@ test("Should return '21st' for 21", () => {
   expect(getOrdinalNumber(21)).toEqual("21st");
 });
 
-test("Should return '101st' for '101'", () => {
+test("Should return '101st' for 101", () => {
   expect(getOrdinalNumber(101)).toEqual("101st");
 });
 
-test("Should return '111th' for '111'", () => {
+test("Should return '111th' for 111", () => {
   expect(getOrdinalNumber(111)).toEqual("111th");
 });
 
@@ -38,7 +38,7 @@ test("Should return '2nd' for 2", () => {
   expect(getOrdinalNumber(2)).toEqual("2nd");
 });
 
-test("Should return '12th' for '12'", () => {
+test("Should return '12th' for 12", () => {
   expect(getOrdinalNumber(12)).toEqual("12th");
 });
 
@@ -46,11 +46,11 @@ test("Should return '22nd' for 22", () => {
   expect(getOrdinalNumber(22)).toEqual("22nd");
 });
 
-test("Should return '102nd' for '102'", () => {
+test("Should return '102nd' for 102", () => {
   expect(getOrdinalNumber(102)).toEqual("102nd");
 });
 
-test("Should return '112th' for '112'", () => {
+test("Should return '112th' for 112", () => {
   expect(getOrdinalNumber(112)).toEqual("112th");
 });
 
@@ -65,7 +65,7 @@ test("Should return '3rd' for 3", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
 });
 
-test("Should return '13th' for '13'", () => {
+test("Should return '13th' for 13", () => {
   expect(getOrdinalNumber(13)).toEqual("13th");
 });
 
@@ -73,14 +73,40 @@ test("Should return '23rd' for 23", () => {
   expect(getOrdinalNumber(23)).toEqual("23rd");
 });
 
-test("Should return '103rd' for '103'", () => {
+test("Should return '103rd' for 103", () => {
   expect(getOrdinalNumber(103)).toEqual("103rd");
 });
 
-test("Should return '113th' for '113'", () => {
+test("Should return '113th' for 113", () => {
   expect(getOrdinalNumber(113)).toEqual("113th");
 });
 
 test("Should return '123rd' for 123", () => {
   expect(getOrdinalNumber(123)).toEqual("123rd");
+});
+
+// Case 3: Identify the ordinal for numbers ending in 4 to 0. Should return ordinals ending in 'th'.
+
+test("Should return '4th' for 4", () => {
+  expect(getOrdinalNumber(4)).toEqual("4th");
+});
+
+test("Should return '15th' for 15", () => {
+  expect(getOrdinalNumber(15)).toEqual("15th");
+});
+
+test("Should return '26th' for 26", () => {
+  expect(getOrdinalNumber(26)).toEqual("26th");
+});
+
+test("Should return '107th' for 107", () => {
+  expect(getOrdinalNumber(107)).toEqual("107th");
+});
+
+test("Should return '288th' for 288", () => {
+  expect(getOrdinalNumber(288)).toEqual("288th");
+});
+
+test("Should return '1039th' for 1039", () => {
+  expect(getOrdinalNumber(1039)).toEqual("1039th");
 });
