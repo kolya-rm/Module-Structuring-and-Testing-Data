@@ -1,4 +1,4 @@
-function reverseWords(str) {
+function spinWords(str) {
   let tokens = str.split(' ');
   let result = [];
   for (let i = 0; i < tokens.length; i++) {
@@ -10,7 +10,9 @@ function reverseWords(str) {
     } 
     result.push(resultStr);
   }
-  return result;
+  return result.join(" ");
 }
 
-console.log(reverseWords("abc abcd abcdef"));
+console.log(spinWords("abc abcd abcdef"));
+
+module.exports = spinWords;
