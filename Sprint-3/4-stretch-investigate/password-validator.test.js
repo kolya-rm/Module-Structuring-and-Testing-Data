@@ -15,40 +15,48 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
+const previousPasswords = ["Bcd1$"];
 
 test("Password should have at least 5 characters", () => {
   // Arrange
   const password = "Ab1$";
   // Act
-  const targetOutput = isValidPassword(password);
+  const targetOutput = isValidPassword(password, previousPasswords);
   // Assert
   expect(targetOutput).toBe(false);
 });
 
 test("Password should have at least 1 English uppercase letter", () => {
   const password = "abc1#";
-  const targetOutput = isValidPassword(password);
+  const targetOutput = isValidPassword(password, previousPasswords);
 
   expect(targetOutput).toBe(false);
 });
 
 test("Password should have at least 1 English lowercase letter", () => {
   const password = "ABC1&";
-  const targetOutput = isValidPassword(password);
+  const targetOutput = isValidPassword(password, previousPasswords);
 
   expect(targetOutput).toBe(false);
 });
 
 test("Password should have at least 1 digit", () => {
   const password = "Abcd*";
-  const targetOutput = isValidPassword(password);
+  const targetOutput = isValidPassword(password, previousPasswords);
 
   expect(targetOutput).toBe(false);
 })
 
 test("Password should have at least 1 non-alphanumeric symbol ('!', '#', '$', '%', '.', '*', '&')", () => {
   const password = "Abcd1";
-  const targetOutput = isValidPassword(password);
+  const targetOutput = isValidPassword(password, previousPasswords);
 
   expect(targetOutput).toBe(false);
 })
+
+test("Password should not be in previous passwords array", () => {
+  const password = "Bcd1$";
+  const targetOutput = isValidPassword(password, previousPasswords);
+
+  expect(targetOutput).toBe(false);
+});

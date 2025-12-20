@@ -1,4 +1,12 @@
-function passwordValidator(password) {
+function passwordValidator(password, previousPasswords) {
+    for (let i = 0; i < previousPasswords.length; i++) {
+      const currentPreviousPassword = previousPasswords[i];
+
+      if (password === currentPreviousPassword) {
+        return false
+      }
+
+    }
     if (password.length < 5) {
         return false;
     }
@@ -30,5 +38,5 @@ function passwordValidator(password) {
     return hasUppercaseLetter && hasLowercaseLetter && hasDigit && hasNonAlphanumericSymbol;
 }
 
-
+passwordValidator("Bcd1$", ["Bcd1$"]);
 module.exports = passwordValidator;
