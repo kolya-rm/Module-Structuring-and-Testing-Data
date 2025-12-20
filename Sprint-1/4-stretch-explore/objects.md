@@ -13,4 +13,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+A: A lot properties.
+
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
+A: A dot symbol after object name means access to a property with name that follows after the dot.
