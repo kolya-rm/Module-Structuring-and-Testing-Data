@@ -16,11 +16,18 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 const isValidPassword = require("./password-validator");
 
-test("password has at least 5 characters", () => {
+test("Password should have at least 5 characters", () => {
   // Arrange
-  const password = "12345";
+  const password = "123A";
   // Act
-  const result = isValidPassword(password);
+  const targetValue = isValidPassword(password);
   // Assert
-  expect(result).toEqual(true);
+  expect(targetValue).toBe(false);
+});
+
+test("Password should have at least 1 English uppercase letter", () => {
+  const password = "12345";
+  const targetValue = isValidPassword(password);
+
+  expect(targetValue).toBe(false);
 });

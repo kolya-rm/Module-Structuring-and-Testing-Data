@@ -2,7 +2,16 @@ function passwordValidator(password) {
     if (password.length < 5) {
         return false;
     }
-    return true;
+
+    const upperCaseLettersRegEx = /[A-Z]/;
+    let hasUpperCaseLetter = false;
+    
+    for (let i = 0; i < password.length; i++) {
+        if (upperCaseLettersRegEx.test(password[i])) {
+            hasUpperCaseLetter = true;
+        }
+    }
+    return hasUpperCaseLetter;
 }
 
 
