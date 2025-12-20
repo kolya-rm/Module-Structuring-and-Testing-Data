@@ -9,4 +9,5 @@ function isPalindrome(str) {
   return cleanedStr === reversedStr;
 }
 
-;module.exports = isPalindrome;
+
+module.exports = isPalindrome;
