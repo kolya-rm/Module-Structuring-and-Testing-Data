@@ -4,8 +4,46 @@ test("should return true for a proper fraction", () => {
   expect(isProperFraction(2, 3)).toEqual(true);
 });
 
-// Case 2: Identify Improper Fractions:
+test("Should return false for improper fraction", () => {
+  expect(isProperFraction(3, 2)).toEqual(false);
+});
 
-// Case 3: Identify Negative Fractions:
+test("Should return true for a proper negative fraction", () => {
+  expect(isProperFraction(-2, 3)).toEqual(true);
+});
 
-// Case 4: Identify Equal Numerator and Denominator:
+test("Should return false for equal positive numerator and denominator", () => {
+  expect(isProperFraction(2, 2)).toEqual(false);
+});
+
+test("Should return false for a negative improper fraction", () => {
+  expect(isProperFraction(-3, 2)).toEqual(false);
+});
+
+test("Should return true for a proper fraction with negative denominator", () => {
+  expect(isProperFraction(2, -3)).toEqual(true);
+});
+
+test("Should return false for an improper fraction with negative denominator", () => {
+  expect(isProperFraction(3, -2)).toEqual(false);  
+});
+
+test("Should return true for a proper fraction with both negative parts", () => {
+  expect(isProperFraction(-2, -3)).toEqual(true);
+});
+
+test("Should return false false for an improper fraction with both negative parts", () => {
+  expect(isProperFraction(-3, -2)).toEqual(false);
+});
+
+test("Should return false for negative equal numerator and denominator", () => {
+  expect(isProperFraction(-2, -2)).toEqual(false);
+});
+
+test("Should return true for a fraction with zero numerator", () => {
+  expect(isProperFraction(0, 2)).toEqual(true);
+});
+
+test("Should return false for a fraction with zero denominator", () => {
+  expect(isProperFraction(2, 0)).toEqual(false);
+});
