@@ -1,25 +1,12 @@
 function isPalindrome(str) {
   // Remove all characters that are not letters or numbers
-  let cleanedStr = "";
-  for (let i = 0; i < str.length; i++) {
-    const char = str[i];
-    if ((char >= "a" && char <= "z") || (char >= "0" && char <= "9")) {
-      cleanedStr += char;
-    }
-  }
+  let cleanedStr = str.replace(/[^a-z0-9]/g, "");
 
   // Reverse the cleaned string
-  let reversedStr = "";
-  for (let i = cleanedStr.length - 1; i >= 0; i--) {
-    reversedStr += cleanedStr[i];
-  }
+  let reversedStr = cleanedStr.split("").reverse().join("");
 
   // Check if the cleaned string is the same forwards and backwards
-  if (cleanedStr === reversedStr) {
-    return true;
-  } else {
-    return false;
-  }
+  return cleanedStr === reversedStr;
 }
 
-module.exports = isPalindrome;
+;module.exports = isPalindrome;
