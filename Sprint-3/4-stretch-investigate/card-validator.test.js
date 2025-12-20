@@ -20,3 +20,10 @@ test("Sum of the card number digits should not be less than 16", () => {
 
   expect(targetOutput).toBe(false);
 })
+
+test("Card number should ends in even digit", () => {
+  const cardNumber = "0000444400002221";
+  const targetOutput = isValidCard(cardNumber);
+
+  expect(targetOutput).toBe(false);
+})

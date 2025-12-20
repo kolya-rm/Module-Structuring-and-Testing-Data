@@ -4,7 +4,7 @@ function cardValidator(cardNumber) {
   }
 
   const digitsRegEx = /\d/;
-  const lastChar = cardNumber[cardNumber - 1];
+  const lastChar = cardNumber[cardNumber.length - 1];
 
   if (digitsRegEx.test(lastChar) && Number(lastChar) % 2 != 0) {
     return false;
@@ -22,6 +22,7 @@ function cardValidator(cardNumber) {
   if (digitsSum < 16) {
     return false;
   }
+  return true;
 }
 
 module.exports = cardValidator;
