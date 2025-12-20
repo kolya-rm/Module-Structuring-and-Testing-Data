@@ -18,7 +18,7 @@ const isValidPassword = require("./password-validator");
 
 test("Password should have at least 5 characters", () => {
   // Arrange
-  const password = "Abc1";
+  const password = "Ab1$";
   // Act
   const targetOutput = isValidPassword(password);
   // Assert
@@ -26,21 +26,28 @@ test("Password should have at least 5 characters", () => {
 });
 
 test("Password should have at least 1 English uppercase letter", () => {
-  const password = "abcd1";
+  const password = "abc1#";
   const targetOutput = isValidPassword(password);
 
   expect(targetOutput).toBe(false);
 });
 
 test("Password should have at least 1 English lowercase letter", () => {
-  const password = "ABCD1";
+  const password = "ABC1&";
   const targetOutput = isValidPassword(password);
 
   expect(targetOutput).toBe(false);
 });
 
 test("Password should have at least 1 digit", () => {
-  const password = "Abcde";
+  const password = "Abcd*";
+  const targetOutput = isValidPassword(password);
+
+  expect(targetOutput).toBe(false);
+})
+
+test("Password should have at least 1 non-alphanumeric symbol ('!', '#', '$', '%', '.', '*', '&')", () => {
+  const password = "Abcd1";
   const targetOutput = isValidPassword(password);
 
   expect(targetOutput).toBe(false);
