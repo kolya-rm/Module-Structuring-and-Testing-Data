@@ -4,20 +4,25 @@ function passwordValidator(password) {
     }
 
     const uppercaseLettersRegEx = /[A-Z]/;
-    const lowercaseLetterRegEx = /[a-z]/;
+    const lowercaseLettersRegEx = /[a-z]/;
+    const digitsRegEx = /[0-9]/;
     let hasUppercaseLetter = false;
     let hasLowercaseLetter = false
+    let hasDigit = false;
     
     for (let i = 0; i < password.length; i++) {
         const currentSymbol = password[i];
         if (uppercaseLettersRegEx.test(currentSymbol)) {
             hasUppercaseLetter = true;
         }
-        if (lowercaseLetterRegEx.test(currentSymbol)) {
+        if (lowercaseLettersRegEx.test(currentSymbol)) {
             hasLowercaseLetter = true;
         }
+        if (digitsRegEx.test(currentSymbol)) {
+            hasDigit = true;
+        }
     }
-    return hasUppercaseLetter && hasLowercaseLetter;
+    return hasUppercaseLetter && hasLowercaseLetter && hasDigit;
 }
 
 
